@@ -11,7 +11,7 @@
 |                                              GET | /recipes                                |     recipes | index       |
 |                                              GET | /recipes/new                            |     recipes | new         |
 |                                             POST | /recipes/                               |     recipes | create      |
-    |            --- Default 7 (member routes) --- |                                         |             |             |
+|                --- Default 7 (member routes) --- |                                         |             |             |
 |                                          **GET** | **/recipes/:id**                        | **recipes** | **show**    |
 |                                          **GET** | **/recipes/:id/edit**                   | **recipes** | **edit**    |
 |                                    **PATCH/PUT** | **/recipes/:id**                        | **recipes** | **update**  |
