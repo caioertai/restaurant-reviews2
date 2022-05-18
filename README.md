@@ -22,8 +22,8 @@
 |                      --- Extra Member Routes ---                                                                       |
 |                                              GET | /restaurants/:id/chef                   | restaurants | chef        |
 |                                              GET | /users/:id/profile                      |       users | profile     |
-| --- Nested Routes (involves extra resources) ---                                                                       |
+|                 --- Nested (extra resources) ---                                                                       |
 |                                              GET | /restaurants/:restaurant_id/reviews/new |     reviews | new         |
 |                                             POST | /restaurants/:restaurant_id/reviews     |     reviews | create      |
-|      --- Shallow Routes (don't nest members) ---                                                                       |
+|             --- Shallow (don't nest members) ---                                                                       |
 |                                           DELETE | /reviews/:id                            |     reviews | destroy     |
