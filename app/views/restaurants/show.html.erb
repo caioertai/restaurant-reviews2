@@ -1,21 +1,38 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <h1><%= @restaurant.name %></h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1><%= @restaurant.name %></h1>
 
-  <p>
-    <%= link_to "Chef Info", chef_restaurant_path(@restaurant) %>
-  </p>
+      <p>
+        <%= link_to "Chef Info", chef_restaurant_path(@restaurant) %>
+      </p>
 
-  <p>
-    <strong>Address:</strong>
-    <%= @restaurant.address %>
-  </p>
+      <p>
+      <strong>Address:</strong>
+      <%= @restaurant.address %>
+      </p>
 
-  <p>
-    <strong>Stars:</strong>
-    <%= @restaurant.stars %>
-  </p>
+      <p>
+      <strong>Stars:</strong>
+      <%= @restaurant.stars %>
+      </p>
 
-  <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-  <%= link_to 'Back', restaurants_path %>
+      <hr>
+
+      <p>
+        <%= link_to "Add Review", new_restaurant_review_path(@restaurant.id), class: "btn btn-secondary" %>
+      </p>
+      <% @restaurant.reviews.each do |review| %>
+        <div class="card p-3 bg-light mb-3">
+          <%= review.content %>
+          <%= link_to "Delete", review_path(review), method: :delete, "data-confirm": "Yes?" %>
+        </div>
+      <% end %>
+
+      <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+      <%= link_to 'Back', restaurants_path %>
+
+    </div>
+  </div>
 </div>
