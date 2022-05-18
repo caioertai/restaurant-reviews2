@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+
+  <p>
+    <%= link_to "Chef Info", chef_restaurant_path(@restaurant) %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @restaurant.address %>
+  </p>
+
+  <p>
+    <strong>Stars:</strong>
+    <%= @restaurant.stars %>
+  </p>
+
+  <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+  <%= link_to 'Back', restaurants_path %>
+</div>
